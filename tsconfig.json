@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "types": ["vite/client", "node"], // 告诉ts-node node的变量和vite/client的变量
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@config/*": ["./config/*"]
+    }
+  },
+  "ts-node": {
+    "esm": true // «———— 开启ts-node ESM功能 否则无法执行openapi
+  },
+  "include": ["src", "config"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

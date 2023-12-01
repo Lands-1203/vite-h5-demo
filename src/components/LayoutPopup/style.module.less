@@ -1,0 +1,39 @@
+.header-popup {
+  width: calc(750rem * 0.8);
+  height: 100%;
+  .header-popup-content-left {
+    width: 106rem;
+    margin-top: 20rem;
+    .user-name {
+      color: #888888;
+      margin-top: 8rem;
+    }
+    :global {
+      .rv-sidebar-item {
+        background-color: #f7f7f7;
+      }
+      .rv-sidebar-item--select::before {
+        height: 80rem;
+      }
+      .rv-cell--clickable {
+        background-color: #f7f7f7;
+      }
+      .rv-cell--clickable:active {
+        background-color: #fff;
+      }
+    }
+    background: rgb(247 247 247);
+    .item {
+      color: rgb(173 173 173);
+      > span {
+        margin-top: 4rem;
+      }
+    }
+    .add {
+      color: rgb(173 173 173);
+      > span {
+        margin-top: 4rpx;
+      }
+    }
+  }
+}
