@@ -50,7 +50,7 @@ const Index: React.FC = () => {
                       message: '请先完成个人认证后再添加企业',
                       confirmButtonText: '去认证',
                       onConfirm: () => {
-                        history.push('/setting/auth/personalAuth');
+                        history.push('/setting/personalAuth');
                       },
                     });
                     return;

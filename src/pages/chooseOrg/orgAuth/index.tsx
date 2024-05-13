@@ -1,12 +1,11 @@
 import OssUpload from '@/components/OssUpload';
 import keepAlive from '@/hoc/keepAlive';
 import { returnUseInitialState } from '@/hooks/useInitialState';
-import { orgIdentitySponsor } from '@/servers/hzChain/CustomerAccount';
 import {
+  orgIdentitySponsor,
   postGetStsAuth,
   postOcrBusinessLicense,
-} from '@/servers/hzChain/customerOcr';
-
+} from '@/servers/hoteTravel/HATToLand';
 import { getAuthorization } from '@/storageManagement';
 import { getHost, isSuccess } from '@/utils';
 import cs from 'classnames';

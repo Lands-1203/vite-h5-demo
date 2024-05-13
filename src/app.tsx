@@ -1,4 +1,4 @@
-import { getAccountMain } from '@/servers/hzChain/CustomerAccount';
+import { getAccountMain } from '@/servers/hoteTravel/HATToLand';
 import { history, isSuccess } from '@/utils';
 import { Notify } from 'react-vant';
 import { getAuthorization, removeAuthorization } from './storageManagement';
@@ -36,13 +36,13 @@ export const layout: API.RunTimeLayoutConfig = ({
 }): API.LayoutReturns => {
   return {
     onPageChange(pathname) {
-      if (
-        !pathname.startsWith('/user') &&
-        (!getAuthorization() || !initialState.userinfo?.accessToken)
-      ) {
-        history.replace('/user/login');
-        return false;
-      }
+      // if (
+      //   !pathname.startsWith('/user') &&
+      //   (!getAuthorization() || !initialState.userinfo?.accessToken)
+      // ) {
+      //   history.replace('/user/login');
+      //   return false;
+      // }
     },
     pageBacground: '#f8f8f8',
     tabBar: {

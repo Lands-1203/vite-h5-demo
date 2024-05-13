@@ -1,6 +1,6 @@
 import CaptchaInput from '@/components/CaptchaInput';
 import { useInitialState } from '@/hooks';
-import { regist } from '@/servers/hzChain/CustomerLogin';
+import { regist, sendRegistSms } from '@/servers/hoteTravel/HATToLand';
 import { setAuthorization } from '@/storageManagement';
 import { history, isSuccess, sha256Hash } from '@/utils';
 import { VPhone, VPwd } from '@/validator';

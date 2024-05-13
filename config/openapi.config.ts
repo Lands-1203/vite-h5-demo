@@ -5,8 +5,8 @@ const openapiConfig: GenerateServiceProps[] = [
   {
     requestLibPath: "import request from '../request';",
     serversPath: './src/servers',
-    schemaPath: `${env.api_url}/v3/api-docs`,
-    projectName: 'hzChain',
+    schemaPath: `${env.hote_travel}/v3/api-docs`,
+    projectName: 'hoteTravel',
     apiPrefix: '',
     namespace: 'SYSAPI',
   },

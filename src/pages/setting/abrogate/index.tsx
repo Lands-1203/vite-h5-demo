@@ -3,7 +3,7 @@ import { useInitialState } from '@/hooks';
 import {
   accountCancel,
   sendAccountCancelSms,
-} from '@/servers/hzChain/CustomerAccount';
+} from '@/servers/hoteTravel/HATToLand';
 import { removeAuthorization } from '@/storageManagement';
 import { history, isSuccess } from '@/utils';
 import cs from 'classnames';

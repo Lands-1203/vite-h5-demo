@@ -33,14 +33,12 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/LandCA': {
-        target: process.env.api_url,
+      '/HotelAndTravel': {
+        target: process.env.hote_travel,
         changeOrigin: true,
-        // rewrite: (path) => path.replace(/^\/api_url/, ''),
+        // rewrite: (path) => path.replace(/^\/hote_travel/, ''),
       },
     },
-    open: true,
-    host: '0.0.0.0',
   },
 
   // ssr: {},

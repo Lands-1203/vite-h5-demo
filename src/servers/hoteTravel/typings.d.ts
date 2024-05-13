@@ -22,69 +22,6 @@ declare namespace SYSAPI {
 
   type cancelAccountResp = true;
 
-  type changeIdentity = {
-    /** -1表示普通身份，没有完成个人认证及机构认证；为0则表示个人认证身份；否则存的是机构的id */
-    identity?: number;
-  };
-
-  type changeIdentityResp = true;
-
-  type changePass = {
-    /** 新密码 */
-    passwordNew?: string;
-    /** 验证码 */
-    captcha?: string;
-  };
-
-  type changePassResp = true;
-
-  type changePassSms = true;
-
-  type changePassSmsResp = true;
-
-  type changePhone = {
-    /** 新手机号 */
-    phoneNew?: string;
-    /** 新手机号验证码 */
-    captcha?: string;
-  };
-
-  type changePhoneCheck = {
-    /** 原手机号or法人手机号or新手机号 */
-    mobilePhone?: string;
-    /** 验证码 */
-    captcha?: string;
-  };
-
-  type changePhoneCheckResp = true;
-
-  type changePhoneResp = true;
-
-  type changePhoneSms = {
-    /** 原手机号or法人手机号or新手机号 */
-    mobilePhone?: string;
-    /** 手机号类型“0-原手机号 1-法人手机号 2-新手机号 */
-    type?: number;
-  };
-
-  type changePhoneSmsResp = true;
-
-  type customerOrgLegalManAuthCheck = {
-    oid?: number;
-  };
-
-  type customerOrgLegalManAuthCheckResp = {
-    authStatus?: number;
-  };
-
-  type customerOrgLegalManAuthLinkReq = {
-    oid?: number;
-  };
-
-  type customerOrgLegalManAuthLinkResp = {
-    signUrl?: string;
-  };
-
   type CustomerRpcPojo = {
     id?: number;
     uid?: number;
@@ -100,256 +37,102 @@ declare namespace SYSAPI {
     tunnelCode?: string;
     authType?: string;
     tunnelSerial?: string;
-    roleCode?: string;
-    oneStand?: boolean;
-  };
-
-  type EsignFaceRecognizeFinishNotice = {
-    flowId?: string;
-    accountId?: string;
-    success?: boolean;
-    contextId?: string;
-    verifyCode?: string;
-  };
-
-  type EsignFaceRecognizeNotificationAnswer = {
-    code?: string;
-    msg?: string;
-  };
-
-  type EsignOrgAuthFinishNotice = {
-    flowId?: string;
-    accountId?: string;
-    agentAccountId?: string;
-    agentFlowId?: string;
-    success?: boolean;
-    contextId?: string;
-    verifyCode?: string;
-  };
-
-  type EsignPersonAuthFinishNotice = {
-    flowId?: string;
-    accountId?: string;
-    success?: boolean;
-    contextId?: string;
-    verifyCode?: string;
   };
 
   type F2BRequestAccountCancelSms = {
     bizContent?: accountCancelSms;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestCancelAccount = {
     bizContent?: cancelAccount;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestChangeIdentity = {
-    bizContent?: changeIdentity;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestChangePass = {
-    bizContent?: changePass;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestChangePassSms = {
-    bizContent?: changePassSms;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestChangePhone = {
-    bizContent?: changePhone;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestChangePhoneCheck = {
-    bizContent?: changePhoneCheck;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestChangePhoneSms = {
-    bizContent?: changePhoneSms;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestCustomerOrgLegalManAuthCheck = {
-    bizContent?: customerOrgLegalManAuthCheck;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestCustomerOrgLegalManAuthLinkReq = {
-    bizContent?: customerOrgLegalManAuthLinkReq;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestFaceRecognize = {
-    bizContent?: faceRecognize;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestLogin = {
     bizContent?: login;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestLoginSms = {
     bizContent?: loginSms;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestLogout = {
     bizContent?: logout;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestOcrBusiLicense = {
     bizContent?: ocrBusiLicense;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestOcrIdentityBack = {
     bizContent?: ocrIdentityBack;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestOcrIdentityFront = {
     bizContent?: ocrIdentityFront;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestOrgAuthSms = {
-    bizContent?: orgAuthSms;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestOrgAuthSmsCheck = {
-    bizContent?: orgAuthSmsCheck;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestOrgIdentitySponsor = {
     bizContent?: orgIdentitySponsor;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestOrgUnbindSms = {
-    bizContent?: orgUnbindSms;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestOrgUnbindSmsCheck = {
-    bizContent?: orgUnbindSmsCheck;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestPersonIdentity = {
-    bizContent?: personIdentity;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestPersonIdentityFaceRecoginize = {
     bizContent?: personIdentityFaceRecoginize;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestPersonIdentityFaceRecognizeSmsCheck = {
     bizContent?: personIdentityFaceRecognizeSmsCheck;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestPersonIdentityFaceRecognizeSmsSend = {
     bizContent?: personIdentityFaceRecognizeSmsSend;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
-  };
-
-  type F2BRequestPersonIdentitySmsCheck = {
-    bizContent?: personIdentitySmsCheck;
-    reqSerial?: string;
-    uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestPostCustomerImageStsAuthReq = {
     bizContent?: postCustomerImageStsAuthReq;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestPostCustomerOssUploadFinishReqPost = {
     bizContent?: PostCustomerOssUploadFinishReqPost;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestRegist = {
     bizContent?: regist;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BRequestRegistSms = {
     bizContent?: registSms;
     reqSerial?: string;
     uid?: number;
-    authorization?: string;
   };
 
   type F2BResponseAccountCancelSmsResp = {
@@ -372,87 +155,6 @@ declare namespace SYSAPI {
 
   type F2BResponseCancelAccountResp = {
     bizContent?: cancelAccountResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseChangeIdentityResp = {
-    bizContent?: changeIdentityResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseChangePassResp = {
-    bizContent?: changePassResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseChangePassSmsResp = {
-    bizContent?: changePassSmsResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseChangePhoneCheckResp = {
-    bizContent?: changePhoneCheckResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseChangePhoneResp = {
-    bizContent?: changePhoneResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseChangePhoneSmsResp = {
-    bizContent?: changePhoneSmsResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseCustomerOrgLegalManAuthCheckResp = {
-    bizContent?: customerOrgLegalManAuthCheckResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseCustomerOrgLegalManAuthLinkResp = {
-    bizContent?: customerOrgLegalManAuthLinkResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseFaceRecognizeResp = {
-    bizContent?: faceRecognizeResp;
     bizCode?: string;
     bizMsg?: string;
     sysCode?: string;
@@ -523,44 +225,8 @@ declare namespace SYSAPI {
     reqSerial?: string;
   };
 
-  type F2BResponseOrgAuthSmsCheckResp = {
-    bizContent?: orgAuthSmsCheckResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseOrgAuthSmsResp = {
-    bizContent?: orgAuthSmsResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
   type F2BResponseOrgIdentitySponsorResp = {
     bizContent?: orgIdentitySponsorResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseOrgUnbindSmsCheckResp = {
-    bizContent?: orgUnbindSmsCheckResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponseOrgUnbindSmsResp = {
-    bizContent?: orgUnbindSmsResp;
     bizCode?: string;
     bizMsg?: string;
     sysCode?: string;
@@ -588,24 +254,6 @@ declare namespace SYSAPI {
 
   type F2BResponsePersonIdentityFaceRecognizeSmsSendResp = {
     bizContent?: personIdentityFaceRecognizeSmsSendResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponsePersonIdentityResp = {
-    bizContent?: personIdentityResp;
-    bizCode?: string;
-    bizMsg?: string;
-    sysCode?: string;
-    sysMsg?: string;
-    reqSerial?: string;
-  };
-
-  type F2BResponsePersonIdentitySmsCheckResp = {
-    bizContent?: personIdentitySmsCheckResp;
     bizCode?: string;
     bizMsg?: string;
     sysCode?: string;
@@ -647,20 +295,6 @@ declare namespace SYSAPI {
     sysCode?: string;
     sysMsg?: string;
     reqSerial?: string;
-  };
-
-  type faceRecognize = {
-    /** 识别成功跳转地址 */
-    callbackUrl?: string;
-  };
-
-  type faceRecognizeResp = {
-    /** 刷脸认证短链接 */
-    authUrl?: string;
-    /** 刷脸认证长链接 */
-    originalUrl?: string;
-    /** 链接失效时间（Unix时间戳格式，单位：毫秒） */
-    expire?: number;
   };
 
   type getFaceRecognizeResultResp = {
@@ -757,29 +391,14 @@ declare namespace SYSAPI {
     legalManCidLicenceIssue?: string;
     legalManCidValidTimeStart?: string;
     legalManCidValidTimeEnd?: string;
-    roleCode?: string;
-    uid?: number;
   };
-
-  type orgAuthSms = true;
-
-  type orgAuthSmsCheck = {
-    /** 验证码 */
-    captcha?: string;
-  };
-
-  type orgAuthSmsCheckResp = {
-    oid?: number;
-  };
-
-  type orgAuthSmsResp = true;
 
   type orgIdentitySponsor = {
     /** 法人手机号 */
     mobilePhone?: string;
     /** 法人姓名 */
     legalManName?: string;
-    /** 法人身份证号 */
+    /** 身份证号 */
     cidCode?: string;
     /** 身份证背面文件ID */
     imageCidBack?: string;
@@ -814,38 +433,11 @@ declare namespace SYSAPI {
     expire?: number;
   };
 
-  type orgUnbindSms = {
-    /** 解绑的组织ID */
-    oid?: number;
-  };
-
-  type orgUnbindSmsCheck = {
-    /** 验证码 */
-    captcha?: string;
-    /** 企业ID */
-    oid?: number;
-  };
-
-  type orgUnbindSmsCheckResp = true;
-
-  type orgUnbindSmsResp = true;
-
-  type personIdentity = {
+  type personIdentityFaceRecoginize = {
     /** 手机号 */
     mobilePhone?: string;
-    /** 姓名 */
-    name?: string;
-    /** 身份证号 */
-    cidCode?: string;
-    /** 身份证背面文件ID */
-    imageCidBack?: string;
-    /** 身份证正面文件ID */
-    imageCidFront?: string;
-  };
-
-  type personIdentityFaceRecoginize = {
-    /** 手机号，不传默认使用注册手机号 */
-    mobilePhone?: string;
+    /** 验证码 */
+    captcha?: string;
     /** 姓名 */
     name?: string;
     /** 身份证号 */
@@ -880,15 +472,6 @@ declare namespace SYSAPI {
 
   type personIdentityFaceRecognizeSmsSendResp = true;
 
-  type personIdentityResp = true;
-
-  type personIdentitySmsCheck = {
-    /** 验证码 */
-    captcha?: string;
-  };
-
-  type personIdentitySmsCheckResp = true;
-
   type postCustomerImageStsAuthReq = {
     /** 文件处理类型，1为个人，2为组织 */
     fileSetType?: string;
@@ -902,8 +485,8 @@ declare namespace SYSAPI {
     bucketName?: string;
     securityToken?: string;
     expiration?: string;
-    accessKeyId?: string;
     accessKeySecret?: string;
+    accessKeyId?: string;
   };
 
   type PostCustomerOssUploadFinishReqPost = {

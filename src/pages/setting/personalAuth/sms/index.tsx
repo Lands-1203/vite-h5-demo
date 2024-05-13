@@ -3,7 +3,7 @@ import {
   personIdentityFaceRecognizeSmsSend,
   personIdentityFaceRecognizeSponsor,
   personIdentityFaceRecognizeSponsorSmsCheck,
-} from '@/servers/hzChain/CustomerAccount';
+} from '@/servers/hoteTravel/HATToLand';
 import { getAuthorization, getTempState } from '@/storageManagement';
 import { getHost, isSuccess } from '@/utils';
 import cs from 'classnames';

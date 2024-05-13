@@ -8,14 +8,13 @@
     "dev": "vite",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "openapi": "cross-env hote_travel=http://10.10.111.11:4040  pnpm run pnpmopenapi",
+    "openapi:pre": "cross-env hote_travel=http:/10.10.111.11:4040 pnpm run pnpmopenapi",
     "pnpmopenapi": "ts-node config/openapi.config.ts",
     "prettier": "prettier -c --write \"**/**.{js,jsx,tsx,ts,less,md,json}\"",
     "preview": "vite preview",
-    "openapi": "cross-env api_url=http://10.10.141.51:4011  pnpm run pnpmopenapi",
-    "openapi:dev": "cross-env api_url=http://10.10.141.51:4011  pnpm run pnpmopenapi",
-    "openapi:pre": "cross-env api_url=hhttp://10.10.141.51:4011 pnpm run pnpmopenapi",
-    "start": "cross-env api_url=http://10.10.141.51:4011/ vite",
-    "start:pre": "cross-env api_url=http://1.1.1.1:4000/  vite"
+    "start": "cross-env hote_travel=http://10.10.111.11:4040/ vite",
+    "start:pre": "cross-env api_url=http://10.10.111.11:4000/  vite"
   },
   "husky": {
     "hooks": {

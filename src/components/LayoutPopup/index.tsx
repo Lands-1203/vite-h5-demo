@@ -1,5 +1,5 @@
 import { useInitialState } from '@/hooks';
-import { logout } from '@/servers/hzChain/CustomerLogin';
+import { logout } from '@/servers/hoteTravel/HATToLand';
 import { removeAuthorization } from '@/storageManagement';
 import { history } from '@/utils';
 import { DeleteO, ManagerO, Revoke } from '@react-vant/icons';

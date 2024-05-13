@@ -1,12 +1,12 @@
 import OssUpload from '@/components/OssUpload';
 import keepAliveHOC from '@/hoc/keepAlive';
 import { returnUseInitialState } from '@/hooks/useInitialState';
-import { personIdentityFaceRecognizeSponsor } from '@/servers/hzChain/CustomerAccount';
 import {
+  personIdentityFaceRecognizeSponsor,
   postGetStsAuth,
   postOcrIdentityBack,
   postOcrIdentityFront,
-} from '@/servers/hzChain/customerOcr';
+} from '@/servers/hoteTravel/HATToLand';
 import { getAuthorization, setTempState } from '@/storageManagement';
 import { getHost, history, isSuccess } from '@/utils';
 import { VPhone } from '@/validator';
